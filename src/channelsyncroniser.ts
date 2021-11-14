@@ -212,6 +212,7 @@ export class ChannelSyncroniser {
 
         const name: string = Util.ApplyPatternString(this.config.channel.namePattern, {
             guild: channel.guild.name,
+            category: channel.parent?.name ?? '',
             name: "#" + channel.name,
         });
         const topic = channel.topic;
