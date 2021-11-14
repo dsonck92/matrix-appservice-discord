@@ -1,4 +1,4 @@
-FROM node:14-alpine AS BUILD
+FROM node:14-alpine3.11 AS BUILD
 COPY . /tmp/src
 # install some dependencies needed for the build process
 RUN apk add --no-cache -t build-deps make gcc g++ python ca-certificates libc-dev wget git
